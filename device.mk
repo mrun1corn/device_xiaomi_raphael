@@ -8,6 +8,7 @@
 $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
 
 # MiuiCamera
+TARGET_INCLUDES_MIUI_CAMERA := true
 $(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 
 # Dalvik
@@ -156,9 +157,7 @@ PRODUCT_BOARD_PLATFORM := msmnile
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64
-
-PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
     libgui_vendor \
